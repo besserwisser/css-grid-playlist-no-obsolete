@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>CSS Grid Gaps</title>
+      <style>
+         body {
+            color: #fff;
+            font-family: 'Roboto';
+            text-align: center;
+         }
+         #content {
+            display: grid;
+            /* grid-template-columns: 3fr 2fr 5fr; */
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-rows: repeat(3, minmax(200px, auto)); */
+            /* grid-template-rows: 200px 300px 400px 500px; */
+            grid-auto-rows: minmax(200px, auto);
+            column-gap: 10px;
+            row-gap: 10px;
+            gap: 10px;
+            max-width: 960px;
+            margin: 0 auto;
+         }
+         #content div {
+            background: #3bbced;
+            padding: 30px;
+         }
+         #content div:nth-child(even) {
+            background: #777;
+            padding: 30px;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="content">
+         <div>1</div>
+         <div>2</div>
+         <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Consequatur, minima fugit eos similique nisi repudiandae officia
+            repellat maiores. Incidunt libero deleniti aspernatur quos, iure
+            similique reprehenderit quasi quod voluptates vitae. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. In inventore id
+            reprehenderit libero laboriosam sint explicabo assumenda? Libero
+            perspiciatis aliquam odit dolor autem rem, doloribus, repellat
+            eligendi aspernatur tempora unde.
+         </div>
+         <div>4</div>
+         <div>5</div>
+         <div>6</div>
+         <div>7</div>
+         <div>8</div>
+         <div>9</div>
+      </div>
+   </body>
+</html>
